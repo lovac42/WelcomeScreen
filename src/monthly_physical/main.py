@@ -29,11 +29,11 @@ def getRandomImage(dir):
     )
 
 
-def alert(dir):
+def alert(msg, dir):
     img=getRandomImage(dir)
     mb=QMessageBox(mw)
     mb.setIconPixmap(QPixmap(img))
-    mb.setWindowTitle("Reminder:")
+    mb.setWindowTitle(msg)
     b=mb.addButton(QMessageBox.Ok)
     b.setDefault(True)
     return mb.exec_()
@@ -68,7 +68,9 @@ def startup_check():
         type+='3'
 
     if type:
-        alert(type)
+        alert("Reminder:", type)
+    elif config.get('show_welcome_message',True):
+        alert("Welcome!", "w")
 
 addHook('profileLoaded', startup_check)
 
