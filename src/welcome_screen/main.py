@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright: (C) 2019 Lovac42
-# Support: https://github.com/lovac42/MonthlyPhysical
+# Support: https://github.com/lovac42/WelcomeScreen
 # License: GNU GPL, version 3 or later; http://www.gnu.org/copyleft/gpl.html
 
 
@@ -12,7 +12,7 @@ from anki.hooks import wrap, addHook
 from .config import *
 
 
-ADDON_NAME='MonthlyPhysical'
+ADDON_NAME='WelcomeScreen'
 
 config=Config(ADDON_NAME)
 
@@ -21,7 +21,7 @@ IMG_EXT = re.compile(r'\.(?:jpe?g|gif|png|bmp)$', re.I)
 
 def getRandomImage(dir):
     MOD_ABS,_ = os.path.split(__file__)
-    dir=os.path.join(MOD_ABS,'images',dir)
+    dir=os.path.join(MOD_ABS,'user_files','images',dir)
     return os.path.join(
         dir,random.choice(
             [i for i in os.listdir(dir) if IMG_EXT.search(i)]

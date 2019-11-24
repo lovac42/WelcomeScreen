@@ -1,4 +1,4 @@
-# Monthly Physical
+# Anki Welcome Screen
 
 Set n days to remind again when checkup is late.  
 

@@ -1,9 +1,9 @@
 @echo off
 set ZIP=C:\PROGRA~1\7-Zip\7z.exe a -tzip -y -r
-set REPO=monthly_physical
-set NAME=Monthly_Physical
-set PACKID=monthly_physical
-set VERSION=0.0.2
+set REPO=welcome_screen
+set NAME=Welcome_Screen
+set PACKID=welcome_screen
+set VERSION=0.0.3
 
 
 quick_manifest.exe "%NAME%" "%PACKID%" >%REPO%\manifest.json
